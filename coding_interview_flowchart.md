@@ -38,11 +38,12 @@ end
 
 subgraph Solution Optimization
    BUD[BUD Optimization]
-   OA[Optimization Analysis]
    BUDB[Bottleneck]
    BUDU[Unnecessary Work]
    BUDD[Duplicate Work]
    SG[Simplify & Generalize]
+   DaSt[Data Structures]
+   Al[Algorithms]
    IR[Iterative or Recursive Approach]
 end
 
@@ -65,6 +66,7 @@ IC --> IEC
 IEC --> IV
 IV --> TSC
 TSC --> CTO
+CTO --> AC
 
 CI --> |Communicate|DS 
 DS --> |Communicate|CS
@@ -82,14 +84,15 @@ TEC --> RM
 PP --> RM
 SA --> RM
 RM --> |Yes| HIRED
-RM --> |No| OA
+RM --> |No| BUD
 
-OA --> SG
-SG --> BUD
-BUD --> BUDB --> IR
-BUD --> BUDU --> IR
-BUD --> BUDD --> IR
-IR --> CI
+BUD --> BUDB --> SG
+BUD --> BUDU --> SG
+BUD --> BUDD --> SG
+SG --> IR
+IR -->DaSt
+DaSt --> Al
+Al --> CI
 
 classDef startColor fill:#00ff00,stroke:#000,stroke-width:2px;
 classDef endColor fill:#ff0000,stroke:#000,stroke-width:2px;
@@ -106,6 +109,6 @@ classDef question fill:#214283,stroke:#000,stroke-width:2px;
 class IC,IEC,IV,TSC,CTO requirementAnalysis
 class CI,DS,CS solutionCrafting
 class TC,WR,UR,TI,TEC,PP,SA solutionValidation
-class BUD,BUDB,BUDU,BUDD,IR,OA,SG, solutionOptimization
+class BUD,BUDB,BUDU,BUDD,IR,DaSt,Al,SG, solutionOptimization
 class IP,UP,AC,RM question
 ```
