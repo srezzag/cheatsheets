@@ -1,6 +1,6 @@
 # Cheat Sheets Repository
 
-Welcome to the Cheat Sheets repository! This collection of cheat sheets is designed to help you quickly reference important information on a variety of topics. Whether you're a developer, student, or professional, these cheat sheets can save you time and provide you with essential information at your fingertips.
+This collection of cheat sheets is designed to help you quickly reference important information on a variety of topics. Whether you're a developer, student, or professional, these cheat sheets can save you time and provide you with essential information at your fingertips.
 
 ## Table of Contents
 
