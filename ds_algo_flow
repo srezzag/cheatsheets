@@ -1,0 +1,54 @@
+graph LR
+
+start[Start]
+start --> question[Understand the Question]
+
+question --> clarification{Need Clarification?}
+clarification -- Yes --> ask[Ask for Clarification]
+clarification -- No --> analyze[Analyze Requirements]
+
+ask --> question
+
+analyze --> difficulty{Difficulty Level}
+difficulty -- Easy --> basicDS[Basic Data Structures]
+difficulty -- Medium --> advDS[Advanced Data Structures]
+difficulty -- Hard --> complexAlgo[Complex Algorithms]
+
+basicDS --> arrays[Arrays: Unsorted, Duplicates Allowed]
+basicDS --> strings[Strings: Manipulate Text]
+basicDS --> lists[Linked Lists: Frequent Insertions/Deletions]
+basicDS --> stacksQueues[Stacks/Queues: LIFO/FIFO Behavior]
+basicDS --> hashTables[Hash Tables: Key-Value Store]
+
+advDS --> trees[Trees: Hierarchical Data]
+advDS --> graphs[Graphs: Modeling Relationships]
+advDS --> heaps[Heaps/Priority Queues: Efficient Min/Max]
+advDS --> dp[Dynamic Programming: Overlapping Subproblems]
+
+complexAlgo --> greedy[Greedy Algorithms: Optimal Subproblems]
+complexAlgo --> divideConquer[Divide and Conquer: Recursive Structure]
+
+arrays --> code[Code]
+strings --> code
+lists --> code
+stacksQueues --> code
+hashTables --> code
+trees --> code
+graphs --> code
+heaps --> code
+dp --> code
+greedy --> code
+divideConquer --> code
+
+code --> solve[Implement & Test]
+solve --> success{Passes Test Cases?}
+solve --> iterate[Iterate & Optimize]
+
+success -- Yes --> successMsg(Success! Prepare for Next)
+success -- No --> iterate
+iterate --> repeat[Repeat Optimization]
+
+iterate -- Yes --> successMsg
+iterate -- No --> iterate
+
+successMsg --> End[End]
